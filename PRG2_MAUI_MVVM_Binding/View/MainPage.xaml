@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PRG2_MAUI_MVVM_Binding.ViewModel"
+             x:Class="PRG2_MAUI_MVVM_Binding.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:StudentsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            <Label Text="Hur Binding fungerar"
+                   FontSize="28" 
+                   Margin="0,0,0,20"/>
+
+            <CollectionView ItemsSource="{Binding Students}"
+                            SelectedItem="{Binding SelectedStudent, Mode=TwoWay}"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout
+                            Spacing="20">
+                            <Label Text="{Binding FirstName}" />
+                            <Label Text="{Binding SecondName}" />
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label 
+                Text="Markerad student:"
+                Margin="0,20,0,20" />
+            <Label Text="{Binding SelectedStudent.FirstName}" />
+            <Label Text="{Binding SelectedStudent.Age}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
