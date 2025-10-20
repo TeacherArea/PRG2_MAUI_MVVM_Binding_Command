@@ -9,7 +9,7 @@
                    FontSize="28" 
                    Margin="0,0,0,20"/>
 
-            <CollectionView ItemsSource="{Binding Students}"
+            <CollectionView ItemsSource="{Binding StudentList}"
                             SelectedItem="{Binding SelectedStudent, Mode=TwoWay}"
                             SelectionMode="Single">
                 <CollectionView.ItemTemplate>
@@ -29,6 +29,25 @@
                 Margin="0,50,0,20" />
             <Label Text="{Binding SelectedStudent.FirstName}" />
             <Label Text="{Binding SelectedStudent.Age}" />
+            <Label 
+                Text="Lägg till en student i listan"
+                FontSize="18"
+                Margin="0,50,0,20" />
+            <HorizontalStackLayout
+                Spacing="30">
+                <Label Text="Förnamn: "/>
+                <Entry Placeholder="Förnamn"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="20">
+                <Label Text="Efternamn: "/>
+                <Entry Placeholder="Efternamn"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="54">
+                <Label Text="Ålder: "/>
+                <Entry Placeholder="Ålder"></Entry>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -7,9 +7,31 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
     internal class StudentViewModel : INotifyPropertyChanged
     {
         private readonly Student _student;
-        public string FirstName { get => _student.FirstName; set { _student.FirstName = value; OnPropertyChanged(nameof(FirstName)); } }
-        public string SecondName { get => _student.SecondName; set { _student.SecondName = value; OnPropertyChanged(nameof(SecondName)); } }
-        public int Age { get => _student.Age; set { _student.Age = value; OnPropertyChanged(nameof(Age)); } }
+        public string FirstName { 
+            get => _student.FirstName; 
+            set
+            { 
+                _student.FirstName = value; 
+                OnPropertyChanged(nameof(FirstName)); 
+            } 
+        }
+        public string SecondName 
+        { 
+            get => _student.SecondName; 
+            set 
+            { 
+                _student.SecondName = value; 
+                OnPropertyChanged(nameof(SecondName)); 
+            } 
+        }
+        public int Age { 
+            get => _student.Age; 
+            set 
+            { 
+                _student.Age = value; 
+                OnPropertyChanged(nameof(Age)); 
+            } 
+        }
 
         public StudentViewModel(Student student) => _student = student;
 
