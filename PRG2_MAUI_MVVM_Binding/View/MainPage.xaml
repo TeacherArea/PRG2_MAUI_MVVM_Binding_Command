@@ -3,10 +3,6 @@
              xmlns:vm="clr-namespace:PRG2_MAUI_MVVM_Binding.ViewModel"
              x:Class="PRG2_MAUI_MVVM_Binding.MainPage">
 
-    <ContentPage.BindingContext>
-        <vm:StudentsViewModel />
-    </ContentPage.BindingContext>
-
     <ScrollView>
         <VerticalStackLayout Padding="10">
             <Label Text="Hur Binding fungerar"

@@ -1,4 +1,5 @@
 ﻿using PRG2_MAUI_MVVM_Binding.Model;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace PRG2_MAUI_MVVM_Binding.ViewModel
@@ -11,6 +12,15 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
         public int Age { get => _student.Age; set { _student.Age = value; OnPropertyChanged(nameof(Age)); } }
 
         public StudentViewModel(Student student) => _student = student;
+
+        public StudentViewModel()
+        {
+            StudentList.Add(new Student { FirstName = "Paratus", SecondName = "Decimius", Age = 52 });
+            StudentList.Add(new Student { FirstName = "Uthgerd", SecondName = "Unbroken", Age = 27 });
+            StudentList.Add(new Student { FirstName = "Alain", SecondName = "Dufont", Age = 32 });
+            StudentList.Add(new Student { FirstName = "Ulric", SecondName = "Stormcloak", Age = 35 });
+        }
+        public ObservableCollection<Student> StudentList { get; } = new();
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName) =>
