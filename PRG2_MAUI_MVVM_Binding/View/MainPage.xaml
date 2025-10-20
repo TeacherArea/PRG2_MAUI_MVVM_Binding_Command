@@ -28,8 +28,9 @@
             </CollectionView>
 
             <Label 
-                Text="Markerad student:"
-                Margin="0,20,0,20" />
+                Text="Markera en student i listan"
+                FontSize="18"
+                Margin="0,50,0,20" />
             <Label Text="{Binding SelectedStudent.FirstName}" />
             <Label Text="{Binding SelectedStudent.Age}" />
         </VerticalStackLayout>

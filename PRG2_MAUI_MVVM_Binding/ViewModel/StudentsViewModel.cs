@@ -8,8 +8,10 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
     {
         public StudentsViewModel()
         {
-            Students.Add(new StudentViewModel(new Student { FirstName = "Paratus", SecondName = "Decimius", Age = 24 }));
+            Students.Add(new StudentViewModel(new Student { FirstName = "Paratus", SecondName = "Decimius", Age = 52 }));
             Students.Add(new StudentViewModel(new Student { FirstName = "Uthgerd", SecondName="Unbroken", Age = 27 }));
+            Students.Add(new StudentViewModel(new Student { FirstName = "Alain", SecondName = "Dufont", Age = 32 }));
+            Students.Add(new StudentViewModel(new Student { FirstName = "Ulric", SecondName = "Stormcloak", Age = 35 }));
         }
 
         public ObservableCollection<StudentViewModel> Students { get; } = new();
