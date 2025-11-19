@@ -5,9 +5,12 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
 {
     internal class StudentViewModel : INotifyPropertyChanged
     {
-        private readonly Student _student;
+        private readonly Student _student; // enbart en referens till Student i Model
+        public StudentViewModel(Student student) => _student = student;
+
         public string FirstName 
-        { get => _student.FirstName; 
+        { 
+            get => _student.FirstName; // här används referensen
             set 
             { 
                 _student.FirstName = value; 
@@ -15,7 +18,8 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
             } 
         }
         public string SecondName 
-        { get => _student.SecondName; 
+        { 
+            get => _student.SecondName; 
             set 
             { 
                 _student.SecondName = value; 
@@ -31,8 +35,6 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
                 OnPropertyChanged(nameof(Age)); 
             } 
         }
-
-        public StudentViewModel(Student student) => _student = student;
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName) =>
