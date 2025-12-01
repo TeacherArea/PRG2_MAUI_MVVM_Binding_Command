@@ -6,6 +6,9 @@ namespace PRG2_MAUI_MVVM_Binding.ViewModel
 {
     internal class StudentsViewModel : INotifyPropertyChanged
     {
+
+        // En liten kommenter
+
         private StudentViewModel _selectedStudent; // behövs enbart för UI, alltså finns den inte i Model
         public ObservableCollection<StudentViewModel> StudentList { get; } = new(); // listor och dess logik görs i ViewModel
 
