@@ -17,7 +17,10 @@ namespace PRG2_MAUI_MVVM_Binding
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // IStudentStorageService injiceras automatiskt i StudentsViewModel konstruktor, och använder Singleton
             builder.Services.AddSingleton<IStudentStorageService, JsonStudentStorageService>();
+
+            // Transient är inte helt nödvändig för enklare appar, men ser till att helt ny instans skapas varje gång beroendet efterfrågas (Dependency Inversion Principle (DIP) ur SOLID)
             builder.Services.AddTransient<StudentsViewModel>();
 
 #if DEBUG

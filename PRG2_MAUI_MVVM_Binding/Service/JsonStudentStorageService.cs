@@ -3,7 +3,7 @@ using PRG2_MAUI_MVVM_Binding.Model;
 
 namespace PRG2_MAUI_MVVM_Binding.Services
 {
-    internal class JsonStudentStorageService : IStudentStorageService
+    public class JsonStudentStorageService : IStudentStorageService
     {
         private readonly string _filePath;
 

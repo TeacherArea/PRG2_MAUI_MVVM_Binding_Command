@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace PRG2_MAUI_MVVM_Binding.ViewModel
 {
-    internal class StudentViewModel : INotifyPropertyChanged
+    public class StudentViewModel : INotifyPropertyChanged
     {
         public Student Model => _student; // för att StudentsViewModel ska kunna använda klassen
         private readonly Student _student; // enbart en referens till Student i Model
